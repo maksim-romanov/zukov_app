@@ -1,0 +1,63 @@
+.content_block
+  // background-color: color.opacity(rgb(#C4C4C4, 0.4))
+  background-color: rgba(#C4C4C4, 0.25)
+  // max-width: 470px
+  width: 100%
+  padding: 25px
+
+.content_block__title
+  font-size: 38px
+  margin-bottom: 2px
+
+.content_block__description
+  display: flex
+  align-items: center
+
+.content_block__description_key
+  margin-right: 3px
+  font-size: 18px
+
+.content_block__description_value
+  font-weight: bold
+  font-size: 18px
+
+.content_block__grid
+  display: flex
+  justify-content: space-between
+  margin-bottom: 50px
+
+.tag
+  color: #21DE1E
+  font-size: 21px
+
+.inputs_group__container
+  width: 100%
+  display: flex
+
+  .input__container
+    width: 100%
+    display: flex
+    flex-direction: column
+
+    &:not(:last-child)
+      margin-right: 10px
+    label.input__label
+      font-size: 14px
+      padding: 5px
+
+    textarea.textarea
+      font-size: 14px
+      padding: 10px
+      border-radius: 8px
+      border: none
+      box-shadow: inset 0px 0px 0px 0px red
+      resize: none
+      margin: 0
+      
+      // border-style: solid
+
+.content_blocks__container
+  display: grid
+  grid-gap: 10px
+  grid-template-columns: repeat( auto-fit, minmax(460px, 1fr) )
+  justify-items: center

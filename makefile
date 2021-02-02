@@ -1,0 +1,2 @@
+start:
+	yarn webpack serve
