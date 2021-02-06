@@ -1,0 +1,13 @@
+
+div(class='ticket_card__container ' + company)
+  .ticket_card__logo-container
+    img(src=require("../../assets/" + company + ".svg").default)
+
+  .ticket_card__fragment
+    .ticket_card__text.ticket_card__company_id
+      span #{company}
+
+    .ticket_card__text.ticket_card__company_value
+      span $ 364.11
+
+

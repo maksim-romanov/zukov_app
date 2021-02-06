@@ -1,16 +1,19 @@
+block variables
 doctype html
 head
   meta(charset='utf-8')
-  title Zukov project
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title #{title}
 
 body
   include ./shared/navbar.pug
   
   .app
     include header.pug
+    block variables
+      - var title = title
     .container
-      .main
-        .content
-          block content
+      .content
+        block content
 
     include footer.pug

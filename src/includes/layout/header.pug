@@ -1,4 +1,10 @@
+block variables
 .header__container
-  .container
-    include ./shared/burger-menu.pug
+  .header_container__container
+    .header_content
+      .header_content__wrapper
+        include ./shared/burger-menu.pug
+        
+      .header_content__wrapper
+        h2.header__title #{title}
     

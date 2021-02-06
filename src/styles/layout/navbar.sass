@@ -1,7 +1,7 @@
 .navbar__wrapper
   height: 100%
   position: absolute
-  min-width: 15vw
+  min-width: 250px
   z-index: 2
   left: -999px
   transition: 0.5s
@@ -40,13 +40,18 @@
   padding: 20px
   padding-right: 25px
   // height: 100%
+  
+a.pagination_item__text
+  font-size: 21px
+  color: rgba(73, 69, 69, 0.75)
+  text-decoration: none
+  transition: 0.25s
+  &:hover
+    opacity: 0.5
 
 .pagination_item__container
   padding-bottom: 15px
-  
-span.pagination_item__text
-  font-size: 21px
-  color: rgba(73, 69, 69, 0.75)
+  cursor: pointer
 
 .active
   left: 0

@@ -7,6 +7,7 @@ module.exports = {
   mode: "development",
   entry: "./javascript/index.js",
   output: {
+    publicPath: "",
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
@@ -17,6 +18,14 @@ module.exports = {
     new HTMLWebpackPlugin({
       filename: "sign-up.html",
       template: "./screens/sign-up.pug",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "sign-in.html",
+      template: "./screens/sign-in.pug",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "create-ticket.html",
+      template: "./screens/create-ticket.pug",
     }),
     new CleanWebpackPlugin(),
   ],
@@ -30,11 +39,15 @@ module.exports = {
         test: /\.(sass|css)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(png|jpg|svg)$/,
+        use: ["file-loader"],
+      },
     ],
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
-    compress: true,
+    compress: false,
     port: 9000,
   },
 };

@@ -1,3 +1,13 @@
+//- import logo from "./assets"
 extends includes/layout/index.pug
+block variables
+  - var title = 'Home'
 block content
-  h Encription models
+  .total-card__wrapper
+    include includes/partials/total-card.pug
+
+  h1 Added Tickets
+  .ticket_cards__container
+    each val in ['aapl', 'mcd', 'fb', 'nike']
+      - locals.company = val
+      include includes/partials/ticket-card.pug
