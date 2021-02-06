@@ -2,4 +2,23 @@ extends ../includes/layout/index.pug
 block variables
   - var title = 'Sign In'
 block content
-  span sign in
+
+  .form__container
+    h1.form__title
+      | Sign In
+      
+    .input__wrapper
+      - locals.label = "E-mail"
+      - locals.placeholder = "Type your email"
+      include ../includes/partials/input.pug
+
+    .input__wrapper
+      - locals.label = "Password"
+      - locals.placeholder = "Type your password"
+      include ../includes/partials/input.pug
+
+      .form__hints_block
+        a.form__hint(href="sign-up.html")
+          | Do you have not account? Sign Up
+
+    button.form__submit_button(type="submit" form="form1") Submit

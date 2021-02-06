@@ -2,4 +2,25 @@ extends ../includes/layout/index.pug
 block variables
   - var title = 'Create Ticket'
 block content
-  span Create ticket
+
+  .form__container
+    h1.form__title
+      | Create Ticket
+      
+    .input__wrapper
+      - locals.label = "Company name *"
+      - locals.placeholder = "Type company name"
+      include ../includes/partials/input.pug
+
+    .input__wrapper
+      - locals.label = "Company stock id *"
+      - locals.placeholder = "Type company stock id"
+      include ../includes/partials/input.pug
+
+    .input__wrapper
+      - locals.label = "Company industry type *"
+      - locals.placeholder = "Type company industry type"
+      include ../includes/partials/input.pug
+
+    button.form__submit_button(type="submit" form="form1") Submit
+
