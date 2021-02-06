@@ -1,0 +1,16 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Zukov project
+
+body
+  include ./shared/navbar.pug
+  
+  .app
+    include header.pug
+    .container
+      .main
+        .content
+          block content
+
+    include footer.pug

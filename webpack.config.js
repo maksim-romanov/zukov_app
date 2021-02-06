@@ -5,14 +5,18 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
-  entry: "./index.js",
+  entry: "./javascript/index.js",
   output: {
-    filename: "rxjs-bundle.js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
     new HTMLWebpackPlugin({
       template: "./index.pug",
+    }),
+    new HTMLWebpackPlugin({
+      filename: "sign-up.html",
+      template: "./screens/sign-up.pug",
     }),
     new CleanWebpackPlugin(),
   ],
